@@ -1,3 +1,4 @@
+import Link from "next/link"
 export default function signup(){
     return (
         <>
@@ -22,7 +23,7 @@ export default function signup(){
               name="text"
               className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               placeholder="First name"
-              required=""
+              required
             />
           </div>
           <div>
@@ -31,17 +32,18 @@ export default function signup(){
               name="text"
               className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               placeholder="Last name"
-              required=""
+              required
             />
           </div>
           <div>
+          <label for="email"></label>
             <input
               type="email"
               name="email"
               id="email"
               className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               placeholder="Email"
-              required=""
+              required
             />
           </div>
           <div>
@@ -51,7 +53,7 @@ export default function signup(){
               id="password"
               placeholder="Password"
               className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-              required=""
+              required
             />
           </div>
           <div>
@@ -60,7 +62,7 @@ export default function signup(){
               name="text"
               className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               placeholder="Role"
-              required=""
+              required
             />
           </div>
           <div className="flex items-start">
@@ -70,7 +72,7 @@ export default function signup(){
                 aria-describedby="terms"
                 type="checkbox"
                 className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 "
-                required=""
+                required
               />
             </div>
             <div className="ml-3 text-sm">
@@ -79,12 +81,12 @@ export default function signup(){
                 className="font-light text-gray-500 dark:text-gray-300"
               >
                 I accept the{" "}
-                <a
+                <Link
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   href="#"
                 >
                   Terms and Conditions
-                </a>
+                </Link>
               </label>
             </div>
           </div>
@@ -96,12 +98,12 @@ export default function signup(){
           </button>
           <p className="text-sm font-light text-white">
             Already have an account?{" "}
-            <a
-              href="#"
+            <Link
+              href="/"
               className="font-medium text-primary-600 hover:underline dark:text-primary-500"
             >
               Login here
-            </a>
+            </Link>
           </p>
         </form>
       </div>
