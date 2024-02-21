@@ -17,7 +17,7 @@ export default function profile(){
         <h2 contenteditable="true" class="font-semibold">Your Name here</h2>
         <p class="text-gray-500">Role</p>
     </div>
-    <ul class="py-4 mt-2 text-gray-700 flex items-center justify-around">
+    <ul class="py-4 mt-2 text-gray-700 flex items-center justify-around">  
         
         <li class="flex flex-col items-start justify-around">
             <p>E-mail address</p>

@@ -50,12 +50,12 @@ export default function Home() {
           </button>
           <p className="text-sm font-light text-white">
             Don't have an account?{" "}
-            <a
+            <Link
               href="/signup"
               className="font-medium text-primary-600 hover:underline dark:text-primary-500"
             >
               Create here
-            </a>
+            </Link>
           </p>
         </form>
       </div>

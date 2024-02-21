@@ -10,11 +10,9 @@
       <span className="ml-3 text-xl font-bold">Webknot</span>
     </Link>
     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <Link href="/" className="mr-5 text-black font-semibold hover:text-white">Employee</Link>
-      <Link href="/" className="mr-5 text-black font-semibold hover:text-white">Projects</Link>
-      <Link href="/" className="mr-5 text-black font-semibold hover:text-white">
-        Dashboard
-      </Link>
+      <Link href="/employee" className="mr-5 text-black font-semibold hover:text-white">Employee</Link>
+      <Link href="/projects" className="mr-5 text-black font-semibold hover:text-white">Projects</Link>
+      <Link href="/" className="mr-5 text-black font-semibold hover:text-white">Dashboard</Link>
       <div className="flex flex-row items-center gap-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
