@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
+    <>
     <div className="flex flex-col min-h-screen items-center justify-content py-2 bg-white">
      <head>
       <title>
@@ -49,12 +50,12 @@ export default function Home() {
           </button>
           <p className="text-sm font-light text-white">
             Don't have an account?{" "}
-            <a
+            <Link
               href="/signup"
               className="font-medium text-primary-600 hover:underline dark:text-primary-500"
             >
               Create here
-            </a>
+            </Link>
           </p>
         </form>
       </div>
@@ -65,5 +66,6 @@ export default function Home() {
       
     </main>
     </div>
+    </>
   );
 }
