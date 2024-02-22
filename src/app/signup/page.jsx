@@ -11,9 +11,9 @@ export default function signup(){
         <main>
             <section className="bg-white">
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-    <div className="w-2/3 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-teal-500 dark:border-gray-700">
-      <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-        <h1 className="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl dark:text-white">
+    <div className="w-2/3 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-teal-500 border-gray-700">
+      <div className="p-6 space-y-4 md:space-y-6 sm:p-8 ">
+        <h1 className="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl ">
           Signup
         </h1>
         <form className="space-y-4 md:space-y-6" action="#">
@@ -78,11 +78,11 @@ export default function signup(){
             <div className="ml-3 text-sm">
               <label
                 htmlFor="terms"
-                className="font-light text-gray-500 dark:text-gray-300"
+                className="font-light text-black"
               >
                 I accept the{" "}
                 <Link
-                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  className="font-medium text-primary-600 hover:underline "
                   href="#"
                 >
                   Terms and Conditions

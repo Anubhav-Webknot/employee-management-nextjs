@@ -1,9 +1,9 @@
 'use client'
 
-import employees from "../../../data"
+import projectdata from "../../../projectdata.json"
 import Navbar from "../navbar/page"
 import React, { useState } from 'react';
-import PopupForm from "@/components/PopupForm";
+import ProjectPopupForm from "@/components/ProjectPopupForm";
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -17,33 +17,31 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
+export default function projects(){
 
+    const [showForm, setShowForm] = useState(false);
 
-export default function employee(){
-
-  const [showForm, setShowForm] = useState(false);
-  
-  const handleCreateEmployeeClick = () => {
-    setShowForm(true);
-  };
-
-  const handleCloseForm = () => {
-    setShowForm(false);
-  };
-
-  const handleSubmitForm = (employeeData) => {
+    const handleCreateEmployeeClick = () => {
+        setShowForm(true);
+      };
     
-    console.log("Submitted employee data:", employeeData);
-    handleCloseForm(); 
-  };
-    return (
-        <>
-        <Navbar/>
-            <title>Employee</title>
-            <main>
-            <section className="bg-gray-200  p-3 sm:p-5">
+      const handleCloseForm = () => {
+        setShowForm(false);
+      };
+      
+      const handleSubmitForm = (ProjectData) => {
+        
+        console.log("Submitted employee data:", ProjectData);
+        handleCloseForm(); 
+      };
+    return(
+    <>
+         <Navbar/>
+        <title>projects</title>
+        <main>
+        <section className="bg-gray-200  p-3 sm:p-5">
   <div className="mx-auto max-w-screen-xl px-4 lg:px-12">
-  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Employees Section</h1>
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Projects Section</h1>
   <br />
     <div className="bg-green-400 relative shadow-md sm:rounded-lg overflow-hidden">
       <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
@@ -66,9 +64,9 @@ export default function employee(){
                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
               />
             </svg>
-            Add employee
+            Add Project
           </button>
-          {showForm && <PopupForm onClose={handleCloseForm} onSubmit={handleSubmitForm} />}
+          {showForm && <ProjectPopupForm onClose={handleCloseForm} onSubmit={handleSubmitForm} />}
 
         </div>
       </div>
@@ -80,31 +78,38 @@ export default function employee(){
         <thead className="text-xs text-gray-400 uppercase bg-gray-700 ">
           <tr>
             <th scope="col" className="px-4 py-3">
-              First Name
+              Project Name
             </th>
             <th scope="col" className="px-4 py-3">
-              Last Name
+              Categories
             </th>
             <th scope="col" className="px-4 py-3">
-              Role
+              Employees-Roles
             </th>
             <th scope="col" className="px-4 py-3">
-              Email
+              
             </th>
-            <th scope="col" className="px-4 py-3">
-              <span className="sr-only">Actions</span>
-            </th>
+            <th scope="col" className="px-4 py-3"></th>
           </tr>
         </thead>
         <tbody>
-        {employees.map(page => (
-            <tr className="border-b border-gray-700" key={page.id}>
-              <td scope="row" className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">{page.fname}</td>
-              <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">{page.lname}</td>
-              <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">{page.role}</td>
-              <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">{page.email}</td>
-              <td className="px-4 py-3 flex items-center justify-end">
+        {projectdata.map(project => (
+            <tr className="border-b border-gray-700" key={project.id}>
+              <td scope="row" className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">{project.project_name}</td>
+              <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">{project.category}</td>
+              <td>
+                <ul>
+                  {project.employees.map((employee, index) => (
+                    <li key={index}>
+                      {employee.name}- {employee.role}
+                    </li>
+                  ))}
+                </ul>
+              </td>
+              <td>
+              
 
+        <div className="flex flex-row gap-3">
           <div>
           <Dialog>
       <DialogTrigger asChild>
@@ -112,44 +117,46 @@ export default function employee(){
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Edit Employee</DialogTitle>
+          <DialogTitle>Edit Project</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="fname" className="text-right">
-              First Name
+            <Label htmlFor="project-name" className="text-right">
+              Project
+            </Label>
+            <Input id="name" value="Nex-ai" className="col-span-3" />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="category" className="text-right">
+              Category
+            </Label>
+            <Input id="category" value="Full-stack" className="col-span-3" />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="role" className="text-right">
+              Employee
             </Label>
             <Input id="name" value="Anubhav" className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="lname" className="text-right">
-              Last Name
-            </Label>
-            <Input id="name" value="Nath" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="role" className="text-right">
+            <Label htmlFor="category" className="text-right">
               Role
             </Label>
-            <Input id="name" value="Software Engineer" className="col-span-3" />
+            <Input id="category" value="Lead" className="col-span-3" />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="email" className="text-right">
-              Email
-            </Label>
-            <Input id="email" value="	example@gmail.com" className="col-span-3" />
-          </div>
-        </div>
+         </div>
         <DialogFooter>
           <Button type="submit">Save changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
           </div>
+          
 
-          <Button variant="destructive">Delete</Button>
+          <Button variant="destructive">Delete</Button></div>
             </td>
             </tr>
+            
         ))}
          
         </tbody>
@@ -157,7 +164,6 @@ export default function employee(){
     </div>
   </div>
 </section>
-</main>
-        </>
-    )
+        </main>
+    </>)
 }

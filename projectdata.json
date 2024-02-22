@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "project_name": "Nex-ai",
+      "category": "Full-stack",
+      "employees": [
+        {"name": "Anubhav", "role": "Developer"},
+        {"name": "Bhuvan", "role": "Lead"},
+        {"name": "Manish", "role": "Manager"}
+        
+      ]
+    },
+    {
+        "id": 2,
+        "project_name": "Nex-ai",
+        "category": "Full-stack",
+        "employees": [
+          {"name": "Anubhav", "role": "Developer"},
+          {"name": "Bhuvan", "role": "Manager"}
+        ]
+      },
+      {
+        "id": 3,
+        "project_name": "Nex-ai",
+        "category": "Full-stack",
+        "employees": [
+          {"name": "Anubhav", "role": "Manager"},
+          {"name": "Bhuvan", "role": "Lead"}
+        ]
+      },
+      {
+        "id": 4,
+        "project_name": "Nex-ai",
+        "category": "Full-stack",
+        "employees": [
+          {"name": "Anubhav", "role": "Lead"},
+          {"name": "Bhuvan", "role": "Manager"}
+        ]
+      },
+      {
+        "id": 5,
+        "project_name": "Nex-ai",
+        "category": "Full-stack",
+        "employees": [
+          {"name": "Anubhav", "role": "Lead"},
+          {"name": "Bhuvan", "role": "Developer"}
+        ]
+      },
+      {
+        "id": 6,
+        "project_name": "Nex-ai",
+        "category": "Full-stack",
+        "employees": [
+          {"name": "Anubhav", "role": "Manager"},
+          {"name": "Bhuvan", "role": "Lead"}
+        ]
+      },
+      {
+        "id": 7,
+        "project_name": "Nex-ai",
+        "category": "Full-stack",
+        "employees": [
+          {"name": "Anubhav", "role": "Manager"},
+          {"name": "Bhuvan", "role": "Developer"}
+        ]
+      }  
+    
+  ]
+  

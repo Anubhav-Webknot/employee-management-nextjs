@@ -14,9 +14,9 @@ export default function Home() {
      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
      <section className="w-2/3 bg-white">
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-    <div className="w-2/3 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-teal-500 dark:border-gray-700">
+    <div className="w-2/3  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-teal-500 border-gray-700">
       <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-        <h1 className="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl dark:text-white">
+        <h1 className="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl">
           Login
         </h1>
         <form className="space-y-4 md:space-y-6" action="#">
