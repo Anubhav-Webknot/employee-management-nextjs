@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-    <div className="flex flex-col min-h-screen items-center justify-content py-2 bg-white">
+    <div className="cover flex flex-col min-h-screen items-center justify-content py-2">
      <head>
       <title>
         Employee-management-Login
