@@ -1,6 +1,14 @@
+"use client";
+import React from "react";
 import Link from "next/link"
+import { Input } from "@/components/ui/input";
+import { EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons";
+
 export default function signup(){
+  const [showPassword, setShowPassword] = React.useState(false);
+  const [password, setPassword] = React.useState("");
     return (
+
         <>
        
         <head>
@@ -46,16 +54,35 @@ export default function signup(){
               required
             />
           </div>
-          <div>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-              required
-            />
-          </div>
+          <div className="flex relative justify-center align-middle ">
+          
+                <Input
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  type={showPassword ? "text" : "password"}
+                  className="px-4 py-6 mt-2 mb-3 bg-white text-black"
+                  required
+                  id="password"
+                  name="password"
+                  placeholder="Enter Password"
+                />
+
+                {showPassword ? (
+                  <EyeClosedIcon
+                    onClick={() => setShowPassword(!showPassword)}
+                    style={{ fontSize: "30px !important" }}
+                    className="hover:text-purple-400 cursor-pointer absolute right-6 top-6"
+                  />
+                ) : (
+                  <EyeOpenIcon
+                    onClick={() => setShowPassword(!showPassword)}
+                    style={{ fontSize: "30px !important" }}
+                    className="hover:text-purple-400 cursor-pointer absolute right-6 top-6"
+                  />
+                )}
+              </div>
           <div>
             <input
               type="text"
