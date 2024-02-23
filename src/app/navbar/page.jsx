@@ -1,7 +1,7 @@
  import styles from "./page.module.css"
  import Link from "next/link"
 
- export default function navbar(){
+ export default function Navbar(){
     return (
         
            <nav className={ `${styles.navigationbar} text-gray-600 body-font`}>
