@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input";
 import { EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons";
 
-export default function signup(){
+export default function Signup(){
   const [showPassword, setShowPassword] = React.useState(false);
   const [password, setPassword] = React.useState("");
     return (

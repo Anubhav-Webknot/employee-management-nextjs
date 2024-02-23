@@ -19,7 +19,7 @@ import { Label } from "@/components/ui/label"
 
 
 
-export default function employee(){
+export default function Employee(){
 
   const [showForm, setShowForm] = useState(false);
   

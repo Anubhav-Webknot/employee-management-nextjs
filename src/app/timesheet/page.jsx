@@ -37,7 +37,7 @@ import { Label } from "@/components/ui/label"
   
 
 
-export default function timesheet(){
+export default function Timesheet(){
     const [position, setPosition] = React.useState("bottom")
     const [showForm, setShowForm] = useState(false);
     
