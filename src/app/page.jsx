@@ -18,7 +18,16 @@ export default function Home() {
      </head>
      
      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-     <section className="w-2/3 bg-white">
+     <section className="w-2/3 ">
+     <h1 className="hover:cursor-pointer mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+    <span className=" text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+      Webknot
+    </span>{" "}
+    Technologies
+  </h1>
+  <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+    Employee Management System
+  </p>
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     <div className="w-2/3  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-teal-500 border-gray-700">
       <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -39,14 +48,14 @@ export default function Home() {
           </div>
           
           <div className="flex relative justify-center align-middle ">
-          
+
                 <Input
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
                   }}
                   type={showPassword ? "text" : "password"}
-                  className="px-4 py-6 mt-2 mb-3 bg-white text-gray-200"
+                  className="px-4 py-6 mt-2 mb-3 bg-white text-black"
                   required
                   id="password"
                   name="password"
@@ -68,12 +77,14 @@ export default function Home() {
                 )}
               </div>
           <div className="flex items-start"></div>
-          <button
-            type="submit"
-            className="w-full text-white bg-primary-600 border border-grey-300 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:bg-white hover:text-teal-500"
-          >
-            Login
+          <button type="submit" className="w-full text-white bg-primary-600 border border-grey-300 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:bg-white hover:text-teal-500">
+          
+          <Link href="/profile">Login
+          </Link> 
           </button>
+            </form>
+          
+         
           <p className="text-sm font-light text-white">
             Don't have an account?{" "}
             <Link
@@ -83,7 +94,15 @@ export default function Home() {
               Create here
             </Link>
           </p>
-        </form>
+          
+                   {/*Profile section navigation option just for smooth navigation for time being, will remove it once integrating backend */}
+                   <p className="text-sm font-light text-white">
+            <Link
+              href="/profile"
+              className="font-medium text-primary-600 hover:underline dark:text-primary-500">
+              Profile
+            </Link>
+          </p>
       </div>
     </div>
   </div>

@@ -7,12 +7,12 @@
            <nav className={ `${styles.navigationbar} text-gray-600 body-font`}>
   <div className="bg-teal-500 container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:cursor-pointer">
-      <span className="ml-3 text-xl font-bold">Webknot</span>
+      <h1 class="bg-gradient-to-r ml-3 text-xl font-bold from-blue-800 via-black to-red-800 inline-block text-transparent bg-clip-text">Webknot Technologies</h1>
     </Link>
     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
       <Link href="/employee" className="mr-5 text-black font-semibold hover:text-white">Employee</Link>
       <Link href="/projects" className="mr-5 text-black font-semibold hover:text-white">Projects</Link>
-      <Link href="/" className="mr-5 text-black font-semibold hover:text-white">Dashboard</Link>
+      <Link href="/timesheet" className="mr-5 text-black font-semibold hover:text-white">Timesheet</Link>
       <div className="flex flex-row items-center gap-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +31,9 @@
         </Link>
       </div>
     </nav>
-    <button className="text-black inline-flex font-semibold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+    <Link href="/" className="text-black inline-flex font-semibold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
       Logout
-    </button>
+    </Link>
   </div>
 </nav>
 
