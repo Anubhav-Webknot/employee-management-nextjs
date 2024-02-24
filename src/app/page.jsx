@@ -26,7 +26,7 @@ export default function Home() {
     Technologies
   </h1>
   <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-    Employee Management System
+    Employee Management Platform
   </p>
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     <div className="w-2/3  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-teal-500 border-gray-700">
